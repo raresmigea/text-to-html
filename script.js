@@ -33,8 +33,6 @@ function getInputValue() {
     newTextStr += '<p>' + paragraph + '</p>';
   });
 
-  console.log('nn: ', newTextStr);
-
   document.getElementById('output').innerHTML = newTextStr;
 }
 
