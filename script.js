@@ -1,3 +1,14 @@
+/**
+ * Related to the URL for HTTP request:
+ * - I couldn't access the URL from the example so I've used a different one for testing:
+ * http://soundcloud.com/oembed?url=http%3A//soundcloud.com/forss/flickermood&format=js&callback=?
+ *
+ * Related to rules 2 and 4.
+ * I don't know if it is the case to have both rules for the same line, it is not implemented for both
+ * at the same time. If needed, it would be needed a new if branch which is entered if both conditions
+ * are true
+ */
+
 function getInputValue() {
   var inputVal = document.getElementById('input').value;
 
@@ -42,14 +53,3 @@ function gets(yourUrl) {
   Httpreq.send(null);
   return Httpreq.responseText;
 }
-
-/**
- * Related to the URL for HTTP request:
- * - I couldn't access the URL from the example so I've used a different one for testing:
- * http://soundcloud.com/oembed?url=http%3A//soundcloud.com/forss/flickermood&format=js&callback=?
- *
- * Related to rules 2 and 4.
- * I don't know if it is the case to have both rules for the same line, it is not implemented for both
- * at the same time. If needed, it would be needed a new if branch which is entered if both conditions
- * are true
- */
