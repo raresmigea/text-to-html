@@ -10,7 +10,7 @@
  */
 
 function getInputValue() {
-  var inputVal = document.getElementById('input').value;
+  const inputVal = document.getElementById('input').value;
 
   const inputLines = inputVal.split('\n');
   inputLines.forEach((arr, index) => {
@@ -21,7 +21,7 @@ function getInputValue() {
 
     // rule 3 - header
     if (arr.startsWith('#')) {
-      var c = arr.split(' ')[0].match(/#/g || []).length;
+      const c = arr.split(' ')[0].match(/#/g || []).length;
       inputLines[index] = `<h${c}>${arr.replace(/#/g, '').trim()}</h${c}>`;
     }
 
@@ -48,7 +48,7 @@ function getInputValue() {
 }
 
 function gets(yourUrl) {
-  var Httpreq = new XMLHttpRequest();
+  const Httpreq = new XMLHttpRequest();
   Httpreq.open('GET', yourUrl, false);
   Httpreq.send(null);
   return Httpreq.responseText;
