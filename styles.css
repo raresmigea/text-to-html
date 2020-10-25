@@ -1,4 +1,4 @@
-.input-container > input {
+input {
   background-color: #28a745;
   color: white;
   border: 1px solid transparent;
@@ -9,9 +9,13 @@
   border-radius: 0.25rem;
 }
 
-.output-container {
+#output {
   border: solid 1px;
   width: 90%;
   height: 20em;
   overflow: auto;
+}
+
+textarea {
+  width: 90%;
 }
