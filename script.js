@@ -27,7 +27,7 @@ function getInputValue() {
 
     // rule 4 - bold
     if (arr.includes('!')) {
-      inputLines[index] = arr.replace(/\!(\w+)\!/g, '<b>$1</b>');
+      inputLines[index] = arr.replace(/\!([^!]+)\!/g, '<b>$1</b>');
     }
 
     // rule 5 - http requests
