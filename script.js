@@ -1,7 +1,7 @@
 function getInputValue() {
   const inputVal = document.getElementById('input').value;
-
   const inputLines = inputVal.split('\n');
+
   inputLines.forEach((arr, index) => {
     // rule 2 - preformatted
     if (arr.includes('`')) {
