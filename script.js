@@ -36,9 +36,9 @@ function getInputValue() {
   document.getElementById('output').innerHTML = newTextStr;
 }
 
-function gets(yourUrl) {
+function gets(url) {
   const Httpreq = new XMLHttpRequest();
-  Httpreq.open('GET', yourUrl, false);
+  Httpreq.open('GET', url, false);
   Httpreq.send(null);
   return Httpreq.responseText;
 }
