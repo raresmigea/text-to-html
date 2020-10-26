@@ -22,7 +22,7 @@ function getInputValue() {
     // rule 5 - http requests
     if (arr.includes('{http')) {
       let url = arr.slice(arr.indexOf('http'), arr.indexOf('}'));
-      const returnedJson = gets(url);
+      const returnedJson = getUrlResponse(url);
       inputLines[index] = arr.replace(arr, `{${returnedJson}}`);
     }
   });
@@ -36,7 +36,7 @@ function getInputValue() {
   document.getElementById('output').innerHTML = newTextStr;
 }
 
-function gets(url) {
+function getUrlResponse(url) {
   const Httpreq = new XMLHttpRequest();
   Httpreq.open('GET', url, false);
   Httpreq.send(null);
