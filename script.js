@@ -3,23 +3,23 @@ function getInputValue() {
   const inputLines = inputVal.split('\n');
 
   inputLines.forEach((arr, index) => {
-    // rule 2 - preformatted
+    // rule 2: preformatted
     if (arr.includes('`')) {
       inputLines[index] = arr.replace(/`([^`]+)`?/g, '<pre>$1</pre>');
     }
 
-    // rule 3 - header
+    // rule 3: header
     if (arr.startsWith('#')) {
       const c = arr.split(' ')[0].match(/#/g || []).length;
       inputLines[index] = `<h${c}>${arr.replace(/#/g, '').trim()}</h${c}>`;
     }
 
-    // rule 4 - bold
+    // rule 4: bold
     if (arr.includes('!')) {
       inputLines[index] = arr.replace(/\!([^!]+)\!/g, '<b>$1</b>');
     }
 
-    // rule 5 - http requests
+    // rule 5: http requests
     if (arr.includes('{http')) {
       let url = arr.slice(arr.indexOf('http'), arr.indexOf('}'));
       const returnedJson = getUrlResponse(url);
@@ -27,7 +27,7 @@ function getInputValue() {
     }
   });
 
-  // rule 1 - paragraphs
+  // rule 1: paragraphs
   newTextStr = '';
   inputLines.forEach(function (paragraph) {
     newTextStr += '<p>' + paragraph + '</p>';
