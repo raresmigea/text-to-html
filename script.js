@@ -3,7 +3,7 @@ function getInputValue() {
   const inputLines = inputVal.split('\n');
 
   inputLines.forEach((arr, index) => {
-    // rule 2: preformatted
+    // rule 2: pre-formatted
     if (arr.includes('`')) {
       inputLines[index] = arr.replace(/`([^`]+)`?/g, '<pre>$1</pre>');
     }
