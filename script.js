@@ -38,8 +38,6 @@ function getUrlResponse(url) {
 
 /*
  * data example
- *
  * http://soundcloud.com/oembed?url=http%3A//soundcloud.com/forss/flickermood&format=js&callback=?
- *
  *
  */
